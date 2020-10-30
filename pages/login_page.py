@@ -12,7 +12,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
 
-        assert self.browser.current_url.find('login'), 'URL not correct'
+        assert self.browser.current_url.find('login'), 'URL not correct' #не работает
 
     def should_be_login_form(self):
 
