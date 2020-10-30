@@ -26,3 +26,6 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.REG_PSW1), 'register password1 not found'
         assert self.is_element_present(*LoginPageLocators.REG_PSW2), 'register password2 not found'
         assert self.is_element_present(*LoginPageLocators.REG_BTN), 'register button not found'
+
+    def register_new_user(self, email, password):
+        #реализовать метод регистрации

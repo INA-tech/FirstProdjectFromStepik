@@ -6,7 +6,7 @@ import time
 class ProductPage(BasePage):
 
     def should_be_basket_link(self):
-        assert self.is_element_present(*ProductPageLocators.BTN_BASKET), "Button add to basket is not presented"
+        assert self.is_element_present(*ProductPageLocators.BTN_ADD_BASKET), "Button add to basket is not presented"
 
     def name_on_product_page(self):
         assert self.is_element_present(
@@ -19,7 +19,7 @@ class ProductPage(BasePage):
         return self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT_PAGE).text
 
     def should_add_to_basket(self):
-        self.browser.find_element(*ProductPageLocators.BTN_BASKET).click()
+        self.browser.find_element(*ProductPageLocators.BTN_ADD_BASKET).click()
 
     def should_be_press_btn_add_to_basket(self):
         self.should_add_to_basket()

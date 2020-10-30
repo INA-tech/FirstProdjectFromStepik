@@ -1,4 +1,5 @@
 import math
+import pytest
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
@@ -60,8 +61,14 @@ class BasePage():
             print("No second alert presented")
 
     def go_to_login_page(self):
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
-        link.click()
+        self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID).click()
+
+    def go_to_basket_page(self):
+        self.browser.find_element(*BasePageLocators.BASKET_LINK).click()
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
