@@ -25,3 +25,6 @@ toml==0.10.1
 urllib3==1.25.11
 wcwidth==0.2.5
 zipp==3.4.0
+
+elizabeth~=0.0.2
+Faker~=4.14.2

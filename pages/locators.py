@@ -5,6 +5,7 @@ class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 class LoginPageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_EMAIL = (By.NAME, "login-username")
     LOGIN_PSW = (By.NAME, "login-password")
     LOGIN_BTN = (By.NAME, "login_submit")
@@ -13,6 +14,8 @@ class LoginPageLocators():
     REG_PSW1 = (By.NAME, "registration-password1")
     REG_PSW2 = (By.NAME, "registration-password2")
     REG_BTN = (By.NAME, "registration_submit")
+
+    LOGOUT = (By.ID, "logout_link")
 
 class ProductPageLocators():
     BTN_ADD_BASKET = (By.CSS_SELECTOR, ".btn-add-to-basket")

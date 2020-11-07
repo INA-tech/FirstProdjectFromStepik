@@ -28,4 +28,12 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.REG_BTN), 'register button not found'
 
     def register_new_user(self, email, password):
-        #реализовать метод регистрации
+
+        self.browser.find_element(*LoginPageLocators.LOGIN_LINK).click()
+
+        self.browser.find_element(*LoginPageLocators.REG_EMAIL).send_keys(email)
+        self.browser.find_element(*LoginPageLocators.REG_PSW1).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.REG_PSW2).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.REG_BTN).click()
+
+        assert self.is_element_present(*LoginPageLocators.LOGOUT), 'user is not registered'
